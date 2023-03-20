@@ -1,0 +1,530 @@
+body, html {
+    font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px;
+	overflow-x:hidden;
+	background:#F3F0F0;
+	
+}
+html {
+    line-height: 1.15;
+}
+/* ........................navbar css................................ */ 
+.navbar-default{
+    transition:500ms ease;
+    background:rgb(22, 82, 240);
+}
+.navbar-default.scrolled {
+	background:#ffff;
+	border:1px solid rgba(201,200,196,0.5);
+	border:none;
+	padding:8px;
+    border-radius:0;
+}
+.navbar-default.scrolled .nav li a{
+    color:#050f19;
+}
+.navbar-default.scrolled .nav li a:hover{
+    color:#69716A;
+}
+.navbar-default.scrolled svg path{
+	fill: rgb(22, 82, 240);
+}
+.navbar-default.scrolled .dropdown-toggle:focus{ 
+    background-color:transparent;
+    color:#050f19;
+}
+.navbar-default.scrolled .dropdown-toggle[aria-expanded="true"] {
+  background:#FFF !important;
+  color:#69716A !important;
+}
+.navbar{
+	border:none;
+	padding:8px;
+    border-radius:0;	
+}
+.navbar .navbar-nav li a{
+	color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+	font-weight:bold;
+    text-decoration: none;
+}
+.navbar .navbar-right .profile-img{
+    margin-top:12px;
+}
+.dropdown-toggle:focus{ 
+    background-color:red;
+    color:white;
+}
+.dropdown-toggle[aria-expanded="true"] {
+    background:#FFF !important;
+    color:white !important;
+}
+.dropdown-toggle:active, .open .dropdown-toggle {
+    background:transparent !important; 
+    color:rgba(255,255,255,0.8) !important;
+}
+.navbar-nav li a:active {
+    background:transparent !important; 
+    color:rgba(255,255,255,0.8) !important;
+}
+.dropdown .dropdown-menu li a{	
+	font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgb(5, 15, 25);
+}
+.dropdown .dropdown-menu li a:hover{
+	background:none;
+	color: rgb(5, 15, 25);
+}
+.navbar .navbar-nav #menu-bar{
+	display:none;
+}
+
+/* ........................main manu css................................ */ 
+.viewport {
+	padding-top: 50px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+/* ........................main navbar manu css................................ */ 
+.viewport .nav-section{
+	height:100%;
+	position:fixed;
+	clear:both;display:flex;
+	
+	padding-top:40px;
+	box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.10);
+	background:rgba(255,255,255,0.7);
+}
+.viewport .nav-section .glyphicon-remove{
+	display:none;
+}
+.viewport .nav-section li a i{
+	font-size:18px;
+}
+.viewport .nav-section li a{
+	color:rgba(0,0,0,0.6);
+	transition:0.2s;
+	font-size:14px;
+}
+.viewport .nav-section li a:hover,.viewport .nav-section li a:focus{
+	background:none;
+	color:#3287DD;
+	transition:0.2s;
+}
+/* ........................main content css................................ */ 
+.all-activity{
+	padding-top:25px;	
+	float:right;
+	padding-left:5;
+	padding-right:10;
+	
+}
+/* ........................card-1 css class=peize................................ */ 
+.prize{
+	padding-left:1px;
+	padding-right:12px;
+}
+.portfolio{
+	padding-left:1px;
+	padding-right:12px;
+}
+.recent{
+	padding-left:1px;
+	padding-right:12px;
+}
+.you{
+	padding-left:1px;
+	padding-right:12px;
+	
+}
+.recent .scroll{
+	overflow-Y:scroll;
+	height:315px;
+	width:100%;
+	padding:0;
+}
+.recent .scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.you .container-fluid,.recent .container-fluid,.portfolio .container-fluid,.prize .container-fluid{
+	
+	height:355px;
+}
+.col-md-6{
+	
+}
+.prize .container-fluid,.portfolio .container-fluid,.recent .container-fluid,.you .container-fluid{
+	background:white;
+	box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.10);border-radius:3px;
+}
+.prize .prize-head,.portfolio .portfolio-head,.recent .recent-head,.you .you-head{
+	padding-top:10px;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.prize .prize-head-left p,.portfolio .portfolio-head-left p,.recent .recent-head-left p,.you .you-head-left p{
+	color:#3287DD;
+	font-weight:500;
+}
+.prize .prize-head-right ul{
+	float:right;
+}
+.prize .prize-head-right ul li{
+	display:inline-block;
+	list-style-type:none;
+    color:rgba(0,0,0,0.4);	
+	cursor:pointer;
+	transition:0.2s;
+}
+.prize .prize-head-right ul li:hover,.prize .prize-head-right ul li:focus{
+	transition:0.2s;
+    color:rgba(0,0,0,0.9);	
+	
+}
+.prize .prize-money-left h3 span{
+	font-size:17px;
+	
+}
+.prize .prize-money-right .btn-group{
+	float:right;
+	margin-top:25px;
+}
+.prize .prize-money-right .btn-group .btn{
+	padding:2px;
+	padding-left:5px;
+	outline:none;
+	box-shadow:none;
+	color:rgba(0,0,0,0.9);
+	background:white;
+	padding-right:5px;
+	font-weight:500;
+	border:1px solid rgba(0,0,0,0.1);
+	border-radius:0px;
+}
+.prize .prize-money-right .btn-group .btn:focus{
+	background:#3287DD;
+	color:white;
+}
+.prize .prize-money-right .btn-group .active{
+	background:#3287DD;
+	color:white;
+}
+.prize .prize-graph{
+	margin-top:20px;
+} 
+.prize .prize-graph .col-md-12:after{
+	content:"";
+	position:absolute;
+	width:90%;
+	z-index:1;
+	height:25px;
+	background:white;
+	right:0;
+	bottom:0;
+}
+.prize .prize-graph .col-md-12:before{
+	content:"";
+	position:absolute;
+	width:70px;
+	z-index:1;
+	height:20px;
+	background:white;
+	left:0;
+	bottom:0;
+}
+
+.prize .prize-graph {
+	padding-right:0;
+}
+.prize-footer{
+	padding-bottom:15px;
+	color:rgba(0,0,0,0.6);
+}
+.prize-footer .prize-footer-left .refresh{
+	float:right;
+	cursor:pointer;
+	transition:0.2s;
+} 
+.prize-footer .prize-footer-left .refresh:hover{
+	color:rgba(0,0,0,0.4);
+	transition:0.2s;
+}
+/* ........................card-2 css class=protfolio................................ */ 
+.portfolio .eth,.portfolio .usd{
+	margin-top:-30px;
+}
+.portfolio .portfolio-bitcoin{
+	border-top:1px solid rgba(0,0,0,0.1);
+	padding-top:10px;
+}
+.portfolio .usd{
+	border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.portfolio .portfolio-prize .portfolio-prize-center h3 span{
+	font-size:17px;
+	
+}
+.portfolio .portfolio-prize .portfolio-prize-center center{
+	margin-bottom:-8px;
+	margin-top:-3px;
+}
+.portfolio .portfolio-bitcoin .bitcoin-left div,.portfolio .eth .eth-left div,.portfolio .usd .usd-left div{
+	margin-top:5px;
+}
+.portfolio .portfolio-bitcoin .bitcoin-left  span,.portfolio .eth .eth-left span,.portfolio .usd .usd-left span{
+	font-size:16px;	
+}
+.portfolio .portfolio-bitcoin .bitcoin-right h5,.portfolio .portfolio-bitcoin .bitcoin-right p,.portfolio .eth .eth-right h5,.portfolio .eth .eth-right p,.portfolio .usd .usd-right h5,.portfolio .usd .usd-right p{
+	float:right;
+	margin-top:3px;	
+}
+.portfolio .portfolio-bitcoin .bitcoin-right p,.portfolio .eth .eth-right p,.portfolio .usd .usd-right p{
+	margin-top:-22px;
+	color:rgba(0,0,0,0.5);
+}
+.portfolio .v-a{
+	padding-top:6px;
+	padding-bottom:6px;
+	
+}
+.portfolio .v-a a{
+	color:rgba(0,0,0,0.4);
+	text-decoration:none;
+	font-size:12px;
+	transition:0.2s;	
+}
+.portfolio .v-a a:hover{
+	color:rgba(0,0,0,0.7);
+	text-decoration:none;
+	transition:0.2s;
+}
+/* ........................card-3 css class=recent................................ */ 
+.recent .recent-coin .recent-coin-left ul{
+	margin-left:0;
+	float:left;
+	padding-left:0;
+}
+.recent .recent-coin .recent-coin-left ul li:nth-child(2){
+	width:42px;
+}
+.recent .recent-coin .recent-coin-left ul li:nth-child(1){
+	font-size:12px;
+	color:rgba(0,0,0,0.6);
+}
+.recent .recent-coin .recent-coin-left ul li{
+	list-style-type:none;
+	display:inline-block;
+	margin-right:15px;
+	font-weight:500;
+	font-size:15px;
+}
+.recent .recent-coin .recent-coin-left ul li span{
+	font-size:12px;
+	color:rgba(0,0,0,0.5);
+}
+.recent{
+	 padding-bottom:20px;
+}
+.recent .container-fluid{
+	
+    padding-bottom:20px;
+}
+.recent .recent-coin {
+	padding-top:10px;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.recent .recent-coin .recent-coin-right h5{
+	float:right;
+	margin-top:3px;
+	color:#1ACB2C;	
+}
+.recent .recent-coin .recent-coin-right p{
+	margin-top:-22px;
+	float:right;
+	color:rgba(0,0,0,0.5);
+}
+/* ........................card-4 css class=you................................ */ 
+.you .you-downlode{
+	padding-bottom:0px;
+}
+.you .you-downlode .you-down-left{
+	padding-top:60px;
+	padding-bottom:50px;
+}
+.you .you-downlode .you-down-left .btn{
+	outline:none;
+	box-shadow:none;
+	font-size:15px;
+	padding-top:8px;
+	padding-right:25px;
+	padding-left:25px;
+	padding-bottom:8px;
+	border-radius:0px;
+}
+.you .you-downlode .you-down-right{
+	padding-right:0;
+}
+.you .you-downlode .you-down-right img{
+	float:right;
+	margin-top:110px;
+	
+}
+/* .......................responsive css................................ */ 
+@media (max-width: 968px){
+.navbar .navbar-right #menu-bar span{
+	font-size:30px;
+	margin-top:10px;
+	color:white;
+	transition:0.2s;
+}
+.navbar .navbar-right #menu-bar span:hover{
+	color:rgba(255,255,255,0.5);
+	transition:0.2s;
+}
+.navbar-default.scrolled .navbar-right #menu-bar span{
+	color:rgba(0,0,0,0.8);
+}
+.navbar-default.scrolled .navbar-right #menu-bar span:hover{
+	color:rgba(0,0,0,0.3);
+}
+.viewport .bg{
+	position:absolute;
+    position:fixed;
+    z-index:3;
+	background:white;
+	width:100%;
+	left:-1200px;
+	height:100%;
+	transition:all ease 0.2s;
+}
+.all-activity{
+	width:100%;
+	padding-top:25px;	
+	float:right;
+	padding-left:15px;
+	padding-right:15px;
+	
+}
+
+.prize{
+	padding-left:12px;
+	padding-right:12px;
+}
+.portfolio{
+	padding-left:12px;
+	padding-right:12px;
+	
+}
+.recent{
+	padding-left:12px;
+	padding-right:12px;
+}
+.you{
+	padding-left:12px;
+	padding-right:12px;
+	
+}
+.viewport .nav-section{
+    position:absolute;
+    position:fixed;
+	z-index:2;
+	background:white;
+	width:250px;
+	left:-300px;
+	padding-top:60px;
+	height:100%;
+	transition:all ease 0.5s;
+}
+.viewport .nav-section .glyphicon-remove{
+	display:block;
+	float:right;
+	right:-80px;
+	font-size:20px;
+	margin-top:-20px;
+	color:rgba(0,0,0,0.3);
+	transition:0.2s;
+}
+.viewport .nav-section .glyphicon-remove:hover{
+	transition:0.2s;
+	color:rgba(0,0,0,0.6);
+}
+.navbar .navbar-nav #menu-bar{
+	display:block;
+}
+.portfolio {
+	margin-top:25px;
+}
+
+
+
+}
+
+@media (max-width: 768px){
+.navbar-default{
+	height:70px;
+}
+.navbar .navbar-right .profile-img{
+	margin-top:-45px;
+}
+.navbar .navbar-right {
+        display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+   float: none;
+   margin-left:50px;
+}
+.navbar .navbar-right .dropdown{
+	margin-top:-50px;
+}
+.navbar .dropdown .dropdown-menu{
+    background:white;	
+	position:absolute;
+	left:-40px;top:54px;
+	box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.15);
+}
+.navbar .navbar-right #menu-bar{
+	position:absolute;
+	right:20;
+	margin-top:-50px;
+	float:right;
+}
+.navbar .navbar-right #menu-bar span{
+	font-size:30px;
+	margin-top:0;
+}
+
+
+ }
+@media (max-width: 403px){
+.prize .prize-graph .col-md-12:after{
+	width:85%;
+	height:37px;
+}
+.prize .prize-graph .col-md-12:before{	
+	width:70px;
+	height:30px;
+}
+}
+@media (max-width: 377px){
+.prize .prize-graph .col-md-12:after{
+	width:83%;
+	height:33px;
+}
+.prize .prize-graph .col-md-12:before{	
+	width:70px;
+	height:30px;
+}
+.you .you-downlode .you-down-right img{
+	float:right;
+	margin-top:158px;
+	
+}
+}
+/* ........................end css................................ */ 

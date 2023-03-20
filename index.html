@@ -1,0 +1,445 @@
+<html>
+       <head>
+			 <meta charset="utf-8">
+			 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+			 <meta name="viewport" content="width=device-width, initial-scale=1">
+			 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	        <title>
+	           Coinbase
+	        </title>
+				    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Days+One" rel="stylesheet">
+					<link rel="icon" href="img/calicon.png" type="image/png" sizes="16x16">
+					<link rel="stylesheet" href="css/bootstrap.min.css">
+					<link rel="stylesheet" href="css/bootstrap.css">
+					<link rel="stylesheet" href="css/style.css">
+					
+					<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+					<link rel="stylesheet" href="css/material-design-iconic-font.css">
+					<link rel="stylesheet" href="fonts/font-awesome.min.css">						
+					<link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Days+One" rel="stylesheet">
+				   <link href="@import url('https://fonts.googleapis.com/css?family=Patua+One');" rel="stylesheet">
+				   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!---price graph js------------ -->
+			<script>
+			   window.onload = function () {
+
+			var chart = new CanvasJS.Chart("chartContainer", {
+			animationEnabled: true,
+			title:{
+				text: ""
+			},
+			axisX:{
+				valueFormatString: "DD MMM",
+				crosshair: {
+					enabled: true,
+					snapToDataPoint: true
+				}
+			},
+			axisY: {
+				title: "",
+				includeZero: false,
+				valueFormatString: "$##0.00",
+				crosshair: {
+					enabled: true,
+					snapToDataPoint: true,
+					labelFormatter: function(e) {
+						return "$" + CanvasJS.formatNumber(e.value, "##0.00");
+					}
+				}
+			},
+			data: [{
+				type: "area",
+				xValueFormatString: "DD MMM",
+				yValueFormatString: "$##0.00",
+				dataPoints: [
+					{ x: new Date(2016, 07, 01), y: 76.727997 },
+					{ x: new Date(2016, 07, 02), y: 75.459999 },
+					{ x: new Date(2016, 07, 03), y: 76.011002 },
+					{ x: new Date(2016, 07, 04), y: 75.751999 },
+					{ x: new Date(2016, 07, 05), y: 77.500000 },
+					{ x: new Date(2016, 07, 08), y: 77.436996 },
+					{ x: new Date(2016, 07, 09), y: 79.650002 },
+					{ x: new Date(2016, 07, 10), y: 79.750999 },
+					{ x: new Date(2016, 07, 11), y: 80.169998 },
+					{ x: new Date(2016, 07, 12), y: 79.570000 },
+					{ x: new Date(2016, 07, 15), y: 80.699997 },
+					{ x: new Date(2016, 07, 16), y: 79.686996 },
+					{ x: new Date(2016, 07, 17), y: 78.996002 },
+					{ x: new Date(2016, 07, 18), y: 78.899002 },
+					{ x: new Date(2016, 07, 19), y: 77.127998 },
+					{ x: new Date(2016, 07, 22), y: 76.759003 },
+					{ x: new Date(2016, 07, 23), y: 77.480003 },
+					{ x: new Date(2016, 07, 24), y: 77.623001 },
+					{ x: new Date(2016, 07, 25), y: 76.408997 },
+					{ x: new Date(2016, 07, 26), y: 76.041000 },
+					{ x: new Date(2016, 07, 29), y: 76.778999 },
+					{ x: new Date(2016, 07, 30), y: 78.654999 },
+					{ x: new Date(2016, 07, 31), y: 77.667000 }
+				]
+			}]
+			});
+			chart.render();
+
+			}
+			</script>			   
+	    </head>
+	
+	<body>
+<!-----------------------navber side------------ --> 
+		<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+			<!-----logo------------ -->
+					<a class="navbar-brand" href="#"> 	
+						<svg width="122" height="28" viewBox="0 0 122 28"><g fill="none" fill-rule="evenodd"><path d="M8.795 17.026a7.736 7.736 0 0 0 1.251 1.93c-1.11.599-2.272.866-3.54.866-3.77 0-6.506-2.49-6.506-6.464 0-4.002 2.876-6.491 6.506-6.491 1.292 0 2.31.28 3.337.83A7.85 7.85 0 0 0 8.67 9.692a5.079 5.079 0 0 0-1.914-.362c-2.233 0-3.965 1.427-3.965 4.03 0 2.462 1.676 4.029 4.078 4.029.688 0 1.323-.125 1.926-.362zm7.582-10.16c3.713 0 6.393 2.631 6.393 6.492 0 3.834-2.68 6.464-6.393 6.464-3.685 0-6.366-2.63-6.366-6.464 0-3.86 2.68-6.491 6.366-6.491zm0 2.379c-2.066 0-3.574 1.595-3.574 4.113 0 2.491 1.508 4.085 3.574 4.085 2.122 0 3.602-1.594 3.602-4.085 0-2.518-1.48-4.113-3.602-4.113zm8.153 10.297V7.146h2.763v12.396H24.53zm-.364-16.201c0-.951.81-1.707 1.731-1.707.922 0 1.732.756 1.732 1.707 0 .98-.81 1.763-1.732 1.763-.92 0-1.731-.784-1.731-1.763zm5.538 4.59c1.731-.672 3.854-1.064 5.668-1.064 3.155 0 5.166 1.203 5.166 4.7v7.975h-2.736V11.82c0-1.791-1.117-2.435-2.653-2.435-.978 0-1.954.14-2.68.364v9.793h-2.765V7.93zM42.852.514h2.764v6.968c.586-.308 1.73-.616 2.82-.616 3.573 0 6.254 2.294 6.254 6.268 0 4-2.653 6.687-7.23 6.687a13.72 13.72 0 0 1-4.608-.812V.515zm2.764 16.677c.53.167 1.229.251 1.926.251 2.54 0 4.356-1.398 4.356-4.253 0-2.406-1.703-3.833-3.797-3.833-1.089 0-1.927.28-2.485.588v7.247zm17.058-5.96c0-1.344-1.006-1.959-2.373-1.959-1.424 0-2.541.42-3.574 1.007V7.873c1.088-.614 2.484-1.006 4.02-1.006 2.708 0 4.635 1.119 4.635 4.224v8.199c-1.173.308-2.848.504-4.243.504-3.211 0-5.557-.98-5.557-3.778 0-2.518 2.15-3.748 5.723-3.748h1.369V11.23zm0 2.882H61.5c-1.927 0-3.183.559-3.183 1.818 0 1.288 1.173 1.791 2.848 1.791.42 0 1.006-.056 1.508-.14v-3.469zm4.718 2.07c1.145.868 2.512 1.4 3.768 1.4 1.23 0 2.04-.42 2.04-1.4 0-1.007-.727-1.371-2.318-1.79-2.569-.588-3.658-1.623-3.658-3.778 0-2.519 1.899-3.75 4.412-3.75 1.395 0 2.512.309 3.545.952v2.546c-1.088-.783-2.15-1.259-3.461-1.259-1.201 0-1.843.588-1.843 1.4 0 .81.53 1.23 1.954 1.622 2.82.616 4.049 1.68 4.049 3.918 0 2.602-1.983 3.777-4.663 3.777-1.452 0-2.904-.391-3.825-1.007v-2.63zm12.27-2.21v.056c.168 2.21 2.066 3.413 3.993 3.413 1.703 0 2.932-.392 4.16-1.203v2.435c-1.117.783-2.764 1.147-4.355 1.147-3.853 0-6.478-2.463-6.478-6.38 0-3.945 2.568-6.575 5.975-6.575 3.601 0 5.304 2.322 5.304 5.707v1.4h-8.598zm6.003-1.79c-.056-1.932-1.005-2.995-2.792-2.995-1.591 0-2.764 1.12-3.127 2.994h5.919z" fill="#FFF"></path></g>
+					   </svg>
+					</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="profile-img"><img width="30px;" src="img/sajal.png"  class="img-circle"></li>
+       <!-----profile-dropdown------------ -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rich herd<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+					<li id ="menu-bar" onclick="menu()"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></li>
+				</ul>			   
+	        </div>
+	    </nav>
+<!----------main section------------ -->
+        <div class="row viewport" id="viewport">
+		    <div class="bg" id="bg">
+		<!----------main manu section------------ -->
+				<div class="col-md-2 nav-section" id="nav-section">
+					<ul class="nav" >
+						<li>
+							<span onclick="remove()" class="glyphicon glyphicon-remove" aria-hidden="true"></span>  
+						</li>
+						<li>
+							<a href="#">
+							  <i class="zmdi zmdi-swap-alt"></i> Dashbord
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							  <i class="zmdi zmdi-shopping-cart-plus"></i></i> Buy/Sell
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							  <i class="zmdi zmdi-format-valign-center"></i> Send/Request
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							  <i class="zmdi zmdi-account-box-o"></i></i> Accounts
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							  <i class="zmdi zmdi-toll"></i> Tools
+							</a>
+						</li>
+						
+						<li>
+							<a href="#">
+							  <i class="zmdi zmdi-settings"></i> Setting
+							</a>
+						</li>
+					</ul>	
+				</div>
+			</div>
+<!----------content section------------ -->
+		    <div class="col-md-10 all-activity" id="all">
+		<!---content section card-1 and card-2 /row-1------------ -->
+				<div class="container-fluid sub-all-activity">
+			<!---content section card-1------------ -->
+					<div class="row">
+						<div class="col-md-6 prize"> 
+							<div class="container-fluid">
+								<div class="row prize-head">
+									<div class="col-md-6 col-xs-4 col-sm-4 prize-head-left">
+										<p>Price Charts</p>
+									</div>
+									<div class="col-md-6 col-xs-8 col-sm-8 prize-head-right">
+										<ul>
+											<li>1H</li>
+											<li>1D</li>
+											<li>1W</li>
+											<li>1M</li>
+											<li>1Y</li>
+											<li>ALL</li>
+										</ul>
+									</div>
+								</div>
+								<div class="row prize-money">
+									<div class="col-md-6 col-xs-6 col-sm-6 prize-money-left">
+										<h3>$735<span>.83</span></h3>
+										<span style="color:#06DE1B"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>  $60.73(9.1%)</span>
+									</div>
+									<div class="col-md-6 col-xs-6 col-sm-6 prize-money-right" id="btn">
+										<div class="btn-group">
+											<button type="button" class="btn btn-primary active">BTC</button>
+											<button type="button" class="btn btn-primary">ETH</button>
+											
+										</div>
+									</div>
+								</div>
+								<div class="row prize-graph">
+									<div class="col-md-12">
+										<div id="chartContainer" style="height: 180px; width: 100%;"></div>
+									</div>
+								</div>
+								<div class="row prize-footer">
+									<div class="col-md-6 col-xs-8 col-sm-8 prize-footer-right">
+										<span>Updated a few seconds ago</span>
+									</div>
+									<div class="col-md-6 col-xs-4 col-sm-4 prize-footer-left">
+										<span  onClick="window.location.reload();" class="refresh"><span class="glyphicon glyphicon-refresh" aria-hidden="true">Refresh</span><span>
+									</div>
+								</div>
+							</div>
+						</div>
+		<!---content section card-2------------ -->
+						<div class="col-md-6 portfolio" >
+							<div class="container-fluid">
+								<div class="row portfolio-head">
+									<div class="col-md-6 portfolio-head-left">
+										<p>Your Portfolio</p>
+									</div>
+								</div>
+								<div class="row portfolio-prize">
+									<div class="col-md-12 portfolio-prize-center">
+										<center><h3>$51<span>.24</span></h3>
+												<h6 style="color:rgba(0,0,0,0.3)">TOTAL BALANCE</h6>
+										</center>
+									</div>
+								</div><br>
+								<div class="row portfolio-bitcoin">
+									<div class="col-md-6 col-xs-6 col-sm-6 bitcoin-left">
+										<div><img width="30px;" src="img/tab1.png"> <span>Bitcoin</span></div>
+										
+									</div>
+									<div class="col-md-6 col-xs-6 col-sm-6 bitcoin-right">
+										<h5>0.07 BTC
+										</h5><br><br><p>$51.24</p>
+									</div>
+									<center><hr style="border:0.5 solid black;width:95%;"></center><br>
+								</div>
+								<div class="row eth">
+									<div class="col-md-6 col-xs-6 col-sm-6 eth-left">
+										<div><img width="30px;" src="img/tab2.png"> <span>Ethereum</span></div>
+										
+									</div>
+									<div class="col-md-6 col-xs-6 col-sm-6 eth-right">
+										<h5>0.07 BTC
+											
+										
+										</h5><br><br><p>$51.24</p>
+									</div>
+									<center><hr style="border:0.5 solid black;width:95%;"></center><br>
+								</div>
+								<div class="row usd">
+									<div class="col-md-6 col-xs-6 col-sm-6 usd-left">
+										<div><img width="30px;" src="img/tab3.png"> <span>US Dollars</span></div>	
+									</div>
+									<div class="col-md-6 col-xs-6 col-sm-6 usd-right">
+										<h5>0.07 BTC
+										</h5><br><br>
+										<p>$51.24</p>
+									</div>
+								</div>
+								<center><h5 class="v-a"><a href="#">View your accounts</a></h5></center>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <div class="container-fluid">
+	<!---content section card-3 and card-4/row-2------------ -->
+					<div class="row" style="margin-top:11px;">
+					<!---content section card-3------------ -->
+						<div class="col-md-6 recent" title="Scroll Down">
+							<div class="container-fluid">
+								<div class="row recent-head">
+									<div class="col-md-6 recent-head-left">
+										<p>Recent Activity</p>
+									</div>
+								</div>
+								<div class="scroll">
+								
+								<div class="row recent-coin">
+									<div class="col-md-9 col-xs-8 col-sm-8 recent-coin-left">
+										<ul>
+											<li ><time>NOV<br>25</time></li>
+											<li><i class="fa fa-refresh" style="font-size:18px;padding:10px;border:1px solid #3287DD;color:#3287DD;border-radius:100px;margin-bottom:-20px;"></i><br><br></li>
+											<li>Bought Bitcoin<br>
+												<span>Using bank of Amirica-bola *********904</span>    
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-3 col-xs-4 col-sm-4 recent-coin-right">
+										<h5>+0.051 BTC
+										</h5><br><br>
+										<p>+$37.51</p>
+									</div>
+								</div>
+								<div class="row recent-coin">
+									<div class="col-md-9  col-xs-8 col-sm-8 recent-coin-left">
+										<ul>
+											<li ><time>NOV<br>25</time></li>
+											<li><i class="fa fa-send-o" style="font-size:18px;padding:10px;border:1px solid #3287DD;color:#3287DD;border-radius:100px;margin-bottom:-20px;"></i><br><br></li>
+											<li>Bought Bitcoin<br>
+												<span>To Bitcoin Address</span>    
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-3 col-xs-4 col-sm-4 recent-coin-right">
+										<h5 style="color:rgba(0,0,0,0.8)">-0.07 BTC
+										</h5><br><br>
+										<p>-$516.78</p>
+									</div>
+								</div>
+								<div class="row recent-coin">
+									<div class="col-md-9 col-xs-8 col-sm-8 recent-coin-left">
+										<ul>
+											<li ><time>NOV<br>25</time></li>
+											<li><i class="fa fa-refresh" style="font-size:18px;padding:10px;border:1px solid #3287DD;color:#3287DD;border-radius:100px;margin-bottom:-20px;"></i><br><br></li>
+											<li>Bought Bitcoin<br>
+												<span>Using bank of Amirica-bola *********904</span>    
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-3 col-xs-4 col-sm-4 recent-coin-right">
+										<h5>+0.673 BTC
+										</h5><br><br>
+										<p>+$496.57</p>
+									</div>
+								</div>
+								<div class="row recent-coin">
+									<div class="col-md-9 col-xs-8 col-sm-8 recent-coin-left">
+										<ul>
+											<li ><time>NOV<br>25</time></li>
+											<li><i class="fa fa-refresh" style="font-size:18px;padding:10px;border:1px solid #3287DD;color:#3287DD;border-radius:100px;margin-bottom:-20px;"></i><br><br></li>
+											<li>Bought Bitcoin<br>
+												<span>Using bank of Amirica-bola *********904</span>    
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-3 col-xs-4 col-sm-4  recent-coin-right">
+										<h5>+0.673 BTC
+										</h5><br><br>
+										<p>+$496.57</p>
+									</div>
+								</div>
+								<div class="row recent-coin">
+									<div class="col-md-9 col-xs-8 col-sm-8 recent-coin-left">
+										<ul>
+											<li ><time>NOV<br>25</time></li>
+											<li><i class="fa fa-refresh" style="font-size:18px;padding:10px;border:1px solid #3287DD;color:#3287DD;border-radius:100px;margin-bottom:-20px;"></i><br><br></li>
+											<li>Bought Bitcoin<br>
+												<span>Using bank of Amirica-bola *********904</span>    
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-3 col-xs-4 col-sm-4  recent-coin-right">
+										<h5>+0.673 BTC
+										</h5><br><br>
+										<p>+$496.57</p>
+									</div>
+								</div>
+								<div class="row recent-coin">
+									<div class="col-md-9 col-xs-8 col-sm-8 recent-coin-left">
+										<ul>
+											<li ><time>NOV<br>25</time></li>
+											<li><i class="fa fa-refresh" style="font-size:18px;padding:10px;border:1px solid #3287DD;color:#3287DD;border-radius:100px;margin-bottom:-20px;"></i><br><br></li>
+											<li>Bought Bitcoin<br>
+												<span>Using bank of Amirica-bola *********904</span>    
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-3 col-xs-4 col-sm-4  recent-coin-right">
+										<h5>+0.673 BTC
+										</h5><br><br>
+										<p>+$496.57</p>
+									</div>
+								</div>
+								
+							</div>
+							</div>
+						</div>
+			<!---content section card-4------------ -->
+						<div class="col-md-6 you">
+							 <div class="container-fluid">
+								<div class="row you-head">
+									<div class="col-md-6 you-head-left">
+										<p>Recommended For You</p>
+									</div>
+								</div>
+								<div class="row you-downlode">
+									<div class="col-md-7 col-sm-7 col-xs-7 you-down-left">
+										<h3>Download Coinbase<br>for your phone</h3>
+										<h5>Acess your coinbase accounts<br>anywhere with our mobile apps</h5>
+										<a href="#" type="button" class="btn btn-primary btn-lg"> <i class="fa fa-mobile" style="font-size:25px;position:absolute;margin-left:-15px;margin-top:-2;"></i> <span>Sms me a link</span></a>
+									</div>
+									<div class="col-md-5 col-sm-5 col-xs-5 you-down-right">
+										<img width="180px;" height="200px;" class="img-responsive" src="img/1ipad-phone.png">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!---all javascript link------------ -->
+		    <script src="js/bootstrap.js"></script>
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		    <script src="js/canvasjs.min.js"></script>
+		    <script src="js/bootstrap.min.js"></script>
+<!---all manu active js------------ -->			
+			<script>
+				var header = document.getElementById("btn");
+				var btns = header.getElementsByClassName("btn");
+				for (var i = 0; i < btns.length; i++) {
+				  btns[i].addEventListener("click", function() {
+				  var current = document.getElementsByClassName("active");
+				  current[0].className = current[0].className.replace(" active", "");
+				  this.className += " active";
+				  });
+				}
+			</script>
+<!---mobile menu slide js------------ -->
+		    <script>
+				function menu(){
+				var side=document.getElementById("nav-section");
+				var sideee=document.getElementById("bg");
+				   side.style.left="0px";
+				   sideee.style.left="0px";
+				   sideee.style.background="rgba(0,0,0,0.4)";
+				   
+				}
+				function remove(){
+					 document.getElementById("nav-section").style.left="-300px";
+					 var sideee=document.getElementById("bg");
+				   
+				   sideee.style.left="-1200px";
+				}
+				
+		    </script>
+<!---scroll js------------ -->
+		    <script>
+						$(window).scroll(function(){
+					$('nav').toggleClass('scrolled', $(this).scrollTop() >20);
+				});
+		    </script>
+	</body>
+</html>
